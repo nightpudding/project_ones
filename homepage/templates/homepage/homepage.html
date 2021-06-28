@@ -1,13 +1,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-<div class="container text-center">
+<div class="container text-right">
     <h1 class="alert alert-success">歡迎回到首頁!</h1>
-    請選擇一項工具 :
+    請選擇一個項目 :
     <br/>
     <br/>
     <form action="{% url 'password_generator' %}">
-        <input type='submit' value='密碼生成器' class="btn btn-warining">
+        <input type='submit' value='密碼生成器' class="btn btn-warning">
     </form>
+    <form action = "{% url 'portfolio' %}">
+        <input type = 'submit' value = '個人簡歷' class = 'btn btn-warning'>
+    </form>
+    <form action = "{% url 'blog' %}">
+        <input type = 'submit' value = '部落格專區' class = 'btn btn-warning'>
+        
+    </form>
+
 </div>
 <div class="container text-right">
     <a href="{% url 'about' %}">關於這個網頁</a>

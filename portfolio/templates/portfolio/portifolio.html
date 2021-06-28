@@ -1,0 +1,21 @@
+<title> 個人簡歷 </title>
+
+<h1> hello world </h1>
+
+{% for project in projects %}
+
+{{ project }}
+<br/>
+<h3>{{ project.title }}</h3>
+<br/>
+<p>{{ project.description }}</p>
+<img src = "{{ project.image.url }}"; height = 120 ; width = 80 >
+
+{% if project.url %}
+<br/>
+<a href="{{ project.url }}"> 對外連結 </a>
+
+{% endif %}
+
+
+{% endfor %}
