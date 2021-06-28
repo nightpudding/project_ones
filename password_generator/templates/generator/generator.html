@@ -1,0 +1,37 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<title>password generator</title>
+
+<div class="container text-right">
+    <br/>
+    <div class="container text-center">
+        <h1 class="alert alert-warning">密碼產生器</h1>
+    </div>
+    <br/>
+    請選擇密碼長度
+    <br/>
+    <form action = "{% url 'password' %}" >
+        <select name='length'>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10' selected='selected'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+            <option value='13'>13</option>
+            <option value='14'>14</option>
+            <option value='15'>15</option>
+            <option value='16'>16</option>
+        </select>
+        <br/>
+        <br/>
+        <input type='checkbox' name='uppercase' >  大寫英文字母<br/>
+        <input type='checkbox' name='numbers' >  數字 <br/>
+        <input type='checkbox' name='special' >  特殊符號 <br/>
+
+        <input type='submit' value='生成' class="btn btn-primary">
+
+
+
+    </form>
+</div>
+

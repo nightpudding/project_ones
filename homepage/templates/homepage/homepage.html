@@ -1,0 +1,14 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<div class="container text-center">
+    <h1 class="alert alert-success">歡迎回到首頁!</h1>
+    請選擇一項工具 :
+    <br/>
+    <br/>
+    <form action="{% url 'password_generator' %}">
+        <input type='submit' value='密碼生成器' class="btn btn-warining">
+    </form>
+</div>
+<div class="container text-right">
+    <a href="{% url 'about' %}">關於這個網頁</a>
+</div>
