@@ -23,3 +23,10 @@ def password(request):
         password += random.choice(characters)
     
     return render(request, 'password/password.html', {'password' : password })
+
+def save(request):
+    
+    if request.GET.get('name'):
+        letter = request.GET.get('name')
+    return render(request, 'password/password.html', {'code': letter})
+

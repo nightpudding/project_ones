@@ -20,7 +20,6 @@ from django.conf import settings
 
 from homepage import views as hp_views
 from password_generator import views as pg_views
-from blog import views as bg_views
 from portfolio import views as pt_views
 
 urlpatterns = [
@@ -28,9 +27,11 @@ urlpatterns = [
     path('password_generator/', pg_views.generator, name='password_generator'),
     path('password/', pg_views.password, name='password'),
     path('about/', hp_views.about, name='about'),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
     path('portfolio', pt_views.info, name='portfolio'),
     path('blog/', include('blog.urls'), name='blog'),
+    path('password/', pg_views.save, name='save'),
+    
     
 
 ]
