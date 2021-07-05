@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
-
+import pandas
 import random
+
 # Create your views here.
 def generator(request):
     return render(request, 'generator/generator.html')
@@ -28,5 +28,6 @@ def save(request):
     
     if request.GET.get('name'):
         letter = request.GET.get('name')
+        
     return render(request, 'password/password.html', {'code': letter})
 
