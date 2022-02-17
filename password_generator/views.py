@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import pandas
 import random
 
 # Create your views here.

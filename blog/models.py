@@ -4,6 +4,6 @@ from django.db import models
 class blog (models.Model):
     title = models.CharField(max_length = 50)
     description = models.TextField()
-    image = models.ImageField(upload_to = 'portfolio/images/')
+    image = models.ImageField( blank = True, upload_to = 'portfolio/images/')
     date = models.DateField()
     url = models.URLField(blank = True)
