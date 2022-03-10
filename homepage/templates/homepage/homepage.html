@@ -23,19 +23,19 @@
         <title>首頁</title>
         <script></script>
     <body>
+        {% load static %}
         <div style="background-color:#f0ecba; padding:10px;">
             <div class="container text-center">
                 <h1 class="alert alert-success">My home</h1>
             </div>
             <div class="container text-right">
-                <div style="padding:10px">
-                    <p>
-                        
-                        歡迎來到我的首頁<br/>
-                        
-                    </p>
+                <div style="padding:10px; text-align: center;">
+                    <p>歡迎來到我的首頁<br/></p>
                 </div>
                 <div style="padding:10px">
+                    <div style = "text-align: center;">
+                        <img src="{% static 'pictures/英國.png' %}" height = 350 >
+                    </div>
                     <table>
                         <tfoot >
                             <p style="font-size:large; font-weight:bold">功能表</p> 
@@ -53,8 +53,8 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form action = "{% url 'blog' %}">
-                                        <input type = 'submit' value = '部落格' class = 'btn btn-warning'>
+                                    <form action = "{% url 'blog:blog' %}">
+                                        <input type='submit' value='部落格' class="btn btn-warning"> 
                                     </form>
                                 </td>
                             </tr>

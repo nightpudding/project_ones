@@ -41,7 +41,7 @@
                 {% for blog in blogs %}
                 <div style="border-style:ridge; ">
                     <div style="padding:20px;">
-                        <h3>{{ blog.title }}</h3>
+                        <a href=" {% url 'blog:detail' blog.id %} "><p>{{blog.title}}</p></a>
                         <hr>
                         <p style="font-size:12px; color:gray">
                             編輯日期: {{ blog.date }}

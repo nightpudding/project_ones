@@ -1,15 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import blog
 
 # Create your views here.
 def all_blogs(Requests):
-    numbers = 0
-    for i in range(0,100,5):
-        numbers = i
-        length = len(blog.objects.all()) - numbers
-        if length >= numbers+5:
-            blogs = blog.objects.order_by('-datetime')[numbers:numbers+5]
-        else : 
-            blogs = blog.objects.order_by('-date')[numbers:len(blog.objects.all())]
-        return render(Requests, 'blog/all_blog.html', {'blogs':blogs})
+    blogs = blog.objects.order_by('-date')
+    return render(Requests, 'blog/all_blog.html', {'blogs':blogs})
+
+def detail(request, blog_id):
+    Blog = get_object_or_404( blog, pk = blog_id)
+    return render(request, 'blog/detail.html', {'blog':Blog})
