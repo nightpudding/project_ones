@@ -23,14 +23,13 @@ from password_generator import views as pg_views
 from portfolio import views as pt_views
 
 urlpatterns = [
-    path('', hp_views.home, name='home'),
-    path('password_generator/', pg_views.generator, name='password_generator'),
-    path('password/', pg_views.password, name='password'),
+    path('', hp_views.home, name='home'), #首頁
     path('about/', hp_views.about, name='about'),
-    path('admin/', admin.site.urls, name='admin'),
-    path('portfolio', pt_views.info, name='portfolio'),
-    path('blog/', include('blog.urls'), name='blog'),
-    path('password/', pg_views.save, name='save'),
+    path('password_generator/', pg_views.generator, name='password_generator'), #密碼生成器
+    path('password/', pg_views.password, name='password'), 
+    path('admin/', admin.site.urls, name='admin'), #後台
+    path('portfolio/', pt_views.info, name='portfolio'), #自傳
+    path('blog/', include('blog.urls'), name='blog'), #日記
     
     
 

@@ -7,3 +7,7 @@ class blog (models.Model):
     image = models.ImageField( blank = True, upload_to = 'portfolio/images/')
     date = models.DateField()
     url = models.URLField(blank = True)
+    
+    def __str__(self):
+        return self.title #在後台可以看到正常的文章標題
+    

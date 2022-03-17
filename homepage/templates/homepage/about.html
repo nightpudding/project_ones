@@ -1,0 +1,29 @@
+<html>
+    {% extends 'base/homebase.html' %}
+    {% block home %}
+    <h1 class="pagename">關於這個網頁</h1>
+    <br/>
+    <div>
+        <form action="{% url 'home' %}">
+            <input type="submit" value="回首頁" class="btn btn-warning">
+        </form>
+        <br/>
+        <br/>
+        <p>
+            此網頁由 林展煥 於 2021/06/08 開發。
+        </p>
+        <h4>更新紀錄:</h4>
+        <ul style="list-style-type: none;">
+            <li> 2021/06/08 新增"密碼生成器"</li>
+            <li> 2021/06/09 新增"關於這個網頁"頁面</li>
+            <li> 2021/06/09 編輯網頁視覺版面</li>
+            <li> 2021/06/28 增加"個人簡歷"及"部落格"頁面</li>
+            <li> 2021/06/29 更新首頁視覺版面</li> 
+            <li> 2021/06/30 修正個人簡歷頁面視覺</li>
+            <li> 2021/07/01 修正密碼生成器視覺</li>
+            <li> 2022/03/14 修正部落格分業</li>
+        </ul>
+    </div>
+    {% endblock %}
+</html>
+
