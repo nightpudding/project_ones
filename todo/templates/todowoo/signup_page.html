@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div>
+            {% extends 'base/base.html' %}
+            {% block base %}
+            <h1>註冊區域</h1>
+            <form method="Post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">send</button>
+            </form>
+        </div>
+        <br/>
+        <p>{{ error }}</p>
+        {% endblock %}
+    </body>
+</html>

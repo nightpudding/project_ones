@@ -4,8 +4,10 @@ from django.db import models
 # 設定網頁顯示內容
 
 class project(models.Model):
-    title = models.CharField(max_length = 20)
-    description = models.CharField(max_length = 100)
+    title = models.CharField(max_length=100)
+    description = models.TextField()
     image = models.ImageField(upload_to = 'portfolio/images/')
     url = models.URLField(blank = True)
     
+    def __str__(self):
+        return self.title

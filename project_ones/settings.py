@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'password_generator',
     'portfolio',
     'blog',
+    'todo',
     
 ]
 
